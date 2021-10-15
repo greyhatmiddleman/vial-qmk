@@ -17,6 +17,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-#define VIAL_KEYBOARD_UID {0x7B, 0x23, 0xF2, 0xEE, 0xC2, 0x2B, 0xF6, 0x32}
+// generate keyboard uid with: python3 util/vial_generate_keyboard_uid.py under the vial-qmk root folder
+#define VIAL_KEYBOARD_UID {0xD8, 0x38, 0xCC, 0xB9, 0x19, 0x91, 0x78, 0x0D}
 #define VIAL_UNLOCK_COMBO_ROWS {0, 1}
 #define VIAL_UNLOCK_COMBO_COLS {0, 1}
