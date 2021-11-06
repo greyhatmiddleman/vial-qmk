@@ -1,4 +1,4 @@
-/* Copyright 2021 Gigahawk
+/* Copyright 2021 greyhatmiddleman
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,9 +16,25 @@
 
 #pragma once
 
-#include "config_common.h"
+#include "quantum.h"
 
-#define DRIVER_1_LED_TOTAL 66
-#define DRIVER_2_LED_TOTAL 32
-#define DRIVER_LED_TOTAL (DRIVER_1_LED_TOTAL + DRIVER_2_LED_TOTAL)
+/* This is a shortcut to help you visually see your layout.
+ *
+ * The first section contains all of the arguments representing the physical
+ * layout of the board and position of the keys.
+ *
+ * The second converts the arguments into a two-dimensional array which
+ * represents the switch matrix.
+ */
+#define LAYOUT_ortho_3x4( \
+    k00, k01, k02, k03, \
+    k10, k11, k12, k13, \
+    k20, k21, k22, k23 \
+) { \
+    { k00, k01, k02, k03 }, \
+    { k10, k11, k12, k13 }, \
+    { k20, k21, k22, k23 } \
+}
 
+
+void testfn(void);

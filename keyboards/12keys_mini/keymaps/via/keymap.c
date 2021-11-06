@@ -1,4 +1,4 @@
-/* Copyright 2021 Gigahawk
+/* Copyright 2021 greyhatmiddleman
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -13,12 +13,19 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+#include QMK_KEYBOARD_H
 
-#pragma once
+// Defines names for use in layer keycodes and the keymap
+enum layer_names {
+    _BASE
+};
 
-#include "config_common.h"
-
-#define DRIVER_1_LED_TOTAL 66
-#define DRIVER_2_LED_TOTAL 32
-#define DRIVER_LED_TOTAL (DRIVER_1_LED_TOTAL + DRIVER_2_LED_TOTAL)
+const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+    /* Base */
+    [_BASE] = LAYOUT_ortho_3x4(
+        KC_VOLU, KC_PGUP, KC_UP  , KC_PGDN,
+        KC_VOLD, KC_LEFT, KC_DOWN, KC_RGHT,
+        KC_MUTE, KC_HOME, KC_END , KC_PSCR
+    )
+};
 

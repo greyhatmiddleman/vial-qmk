@@ -1,4 +1,4 @@
-/* Copyright 2021 Gigahawk
+/* Copyright 2021 greyhatmiddleman
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,11 +14,16 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#pragma once
+#include "12keys_mini.h"
 
-#include "config_common.h"
+void testfn(void) {
+    SEND_STRING("testing");
+}
 
-#define DRIVER_1_LED_TOTAL 66
-#define DRIVER_2_LED_TOTAL 32
-#define DRIVER_LED_TOTAL (DRIVER_1_LED_TOTAL + DRIVER_2_LED_TOTAL)
 
+// using the pro micro led indicators
+bool led_update_keyboard(led_t led_state) {
+    writePinHigh(B0);
+    writePinHigh(D5);
+    return true;
+}
