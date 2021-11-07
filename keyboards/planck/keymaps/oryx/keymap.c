@@ -16,6 +16,8 @@
  */
 
 #include QMK_KEYBOARD_H
+#include "muse.h"
+#include "eeprom.h"
 
 enum planck_keycodes {
     RGB_SLD = EZ_SAFE_RANGE,
